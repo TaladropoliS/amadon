@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Amadon</title>
 </head>
+
 <body>
-    <h3>Thank you for your business!</h3>
-    <p>We charged your credit card for $</p>
-    <p>You have ordered # items so far and spent $$ with Amadon.com!</p>
-    <p><a href="/">Go Back</a></p>
+    <h3>Gracias por su compra!</h3>
+    <p>Hemos realizado un cargo a su Tarjeta de Crédito por $ {{ total_charge }}</p>
+    <p>Compraste {{ total_productos }} producto(s) hasta ahora, llevas gastado {{ gastado_en_total }} en Amadon.com!</p>
+    <p><a href="/">Volver</a></p>
 </body>
+
 </html>

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Amadon</title>
 </head>
+
 <body>
     <h1>Amadon Store!</h1>
     <table>
@@ -20,10 +22,10 @@
         <tbody>
             {% for product in all_products %}
             <tr>
-                <form action="/checkout" method="post">
-                    {% csrf_token %}
+                <form action="checkout/" method="post">{% csrf_token %}
                     <td>{{product.description}}</td>
                     <td><input type="hidden" name="price" value="{{product.price}}">{{product.price}}</td>
+                    <td><input type="hidden" name="caracola" value="{{product.id}}">{{product.id}}</td>
                     <td><select name="quantity">
                         <option value="1">1</option>              
                         <option value="2">2</option>              
@@ -36,4 +38,5 @@
         </tbody>
     </table>
 </body>
+
 </html>
